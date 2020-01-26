@@ -1,0 +1,24 @@
+{
+  "name": "xf-tts-socket",
+  "version": "1.0.0",
+  "description": "xunfei tts websocket nodejs async await",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "xunfei",
+    "tts",
+    "websocket",
+    "nodejs",
+    "async",
+    "await"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "uniqid": "^5.2.0",
+    "websocket": "^1.0.31"
+  }
+}
