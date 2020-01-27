@@ -1,12 +1,14 @@
 {
   "name": "xf-tts-socket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "xunfei tts websocket nodejs async await",
   "main": "index.js",
   "scripts": {
     "start": "node lib/index.js",
     "test": "node test/test.js"
   },
+  "repository": "jimuyouyou/xf-tts-socket",
+  "homepage": "https://github.com/jimuyouyou/xf-tts-socket",
   "keywords": [
     "xunfei",
     "tts",
