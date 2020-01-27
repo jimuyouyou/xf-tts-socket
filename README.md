@@ -76,7 +76,7 @@ const test = () => {
   const business = {};
   const text = '如果握手失败，则根据不同错误类型返回不同HTTP Code状态码';
   const file = 'test.mp3';
-  XunfeiTTS(auth, business, text, file, (ret) => {
+  XunfeiTTS(auth, business, text, file, (err, ret) => {
     console.log('ret', ret);
   });
 };
