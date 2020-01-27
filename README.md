@@ -43,9 +43,9 @@ const getXunfeiTTSAsync = promisify(XunfeiTTS);
 
 const test = async () => {
   const auth = {
-    app_id,
-    app_skey,
-    app_akey
+    app_id: 'xxxxxx',
+    app_skey: 'xxxxxxxxxxx',
+    app_akey: 'xxxxxxxxxxx',
   };
   const business = {
     aue: 'raw',
