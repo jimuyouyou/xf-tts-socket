@@ -87,6 +87,6 @@ test();
 # 实现原理
 - pcm是xunfei默认的格式返回，因此如果指定文件是这种类型的话，未作任何语音转码
 - 其他形式的文件(mp3, wav等)是使用ffmpeg进行的音频转码
-
+- 为方便使用，和提高安装的速度与成功率，内置了ffmpeg可执行文件，因此安装包略大，[详情查看](https://github.com/jimuyouyou/xf-tts-socket/tree/master/bin)
 # 支持所有讯飞指定参数的设置
 - [讯飞官网API说明](https://www.xfyun.cn/doc/tts/online_tts/API.html#%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E6%B5%81%E7%A8%8B)
