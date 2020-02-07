@@ -13,7 +13,29 @@
 
 # Quick Start
 - `npm install xf-tts-socket --save`
-- async-await使用方式(默认发音人设置)
+- async-await使用方式(默认发音人设置-pcm格式音频)
+```js
+const XunfeiTTS = require('xf-tts-socket');
+const { promisify } = require('util');
+const getXunfeiTTSAsync = promisify(XunfeiTTS);
+
+const test = async () => {
+  const auth = {
+    app_id: 'xxxxxx',
+    app_skey: 'xxxxxxxxxxx',
+    app_akey: 'xxxxxxxxxxx',
+  };
+  const business = {};
+  const text = '如果握手失败，则根据不同错误类型返回不同HTTP Code状态码';
+  const file = 'test.pcm';
+
+  const ret = await getXunfeiTTSAsync(auth, business, text, file);
+  console.log('ret', ret);
+};
+
+test();
+```
+- async-await使用方式(默认发音人设置-mp3格式音频)
 ```js
 const XunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
@@ -87,6 +109,7 @@ test();
 # 实现原理
 - pcm是xunfei默认的格式返回，因此如果指定文件是这种类型的话，未作任何语音转码
 - 其他形式的文件(mp3, wav等)是使用ffmpeg进行的音频转码
-- 为方便使用，和提高安装的速度与成功率，内置了ffmpeg可执行文件，因此安装包略大，[详情查看](https://github.com/jimuyouyou/xf-tts-socket/tree/master/bin)
+- ffmpeg使用的是[ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static)类库
+
 # 支持所有讯飞指定参数的设置
 - [讯飞官网API说明](https://www.xfyun.cn/doc/tts/online_tts/API.html#%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E6%B5%81%E7%A8%8B)

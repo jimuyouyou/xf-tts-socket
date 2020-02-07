@@ -1,6 +1,6 @@
 {
   "name": "xf-tts-socket",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "xunfei tts websocket nodejs async await",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "ffmpeg-static": "^4.0.1",
     "uniqid": "^5.2.0",
     "websocket": "^1.0.31"
   }
