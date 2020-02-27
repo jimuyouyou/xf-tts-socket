@@ -1,4 +1,4 @@
-# 科大讯飞文本转语音API转换器 - 基于最新的Websocket版本协议
+# 科大讯飞文本转语音API - 基于最新的Websocket版本协议
 - 支持回调函数
 - 支持async-await
 - 支持pcm, mp3, wav等常见音频格式
