@@ -10,7 +10,7 @@ const test = async (app_id, app_skey, app_akey) => {
     app_akey
   };
   const business = {};
-  const text = '如果握手失败，则根据不同错误类型返回不同HTTP Code状态码';
+  const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
   const file = path.resolve('./test/test.mp3');
 
   try {

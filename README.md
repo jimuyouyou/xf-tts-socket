@@ -22,13 +22,9 @@ const { promisify } = require('util');
 const getXunfeiTTSAsync = promisify(XunfeiTTS);
 
 const test = async () => {
-  const auth = {
-    app_id: 'xxxxxx',
-    app_skey: 'xxxxxxxxxxx',
-    app_akey: 'xxxxxxxxxxx',
-  };
+  const auth = { app_id: 'xxxxxx', app_skey: 'xxxxxxxxxxx', app_akey: 'xxxxxxxxxxx' };
   const business = {};
-  const text = '如果握手失败，则根据不同错误类型返回不同HTTP Code状态码';
+  const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
   const file = 'test.pcm';
 
   const ret = await getXunfeiTTSAsync(auth, business, text, file);
@@ -45,13 +41,9 @@ const { promisify } = require('util');
 const getXunfeiTTSAsync = promisify(XunfeiTTS);
 
 const test = async () => {
-  const auth = {
-    app_id: 'xxxxxx',
-    app_skey: 'xxxxxxxxxxx',
-    app_akey: 'xxxxxxxxxxx',
-  };
+  const auth = { app_id: 'xxxxxx', app_skey: 'xxxxxxxxxxx', app_akey: 'xxxxxxxxxxx' };
   const business = {};
-  const text = '如果握手失败，则根据不同错误类型返回不同HTTP Code状态码';
+  const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
   const file = 'test.mp3';
 
   const ret = await getXunfeiTTSAsync(auth, business, text, file);
@@ -68,11 +60,7 @@ const { promisify } = require('util');
 const getXunfeiTTSAsync = promisify(XunfeiTTS);
 
 const test = async () => {
-  const auth = {
-    app_id: 'xxxxxx',
-    app_skey: 'xxxxxxxxxxx',
-    app_akey: 'xxxxxxxxxxx',
-  };
+  const auth = { app_id: 'xxxxxx', app_skey: 'xxxxxxxxxxx', app_akey: 'xxxxxxxxxxx' };
   const business = {
     aue: 'raw',
     auf: 'audio/L16;rate=16000',
@@ -80,7 +68,7 @@ const test = async () => {
     tte: 'UTF8',
     speed: 50
   };
-  const text = '如果握手失败，则根据不同错误类型返回不同HTTP Code状态码';
+  const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
   const file = 'test.mp3';
 
   const ret = await getXunfeiTTSAsync(auth, business, text, file);
@@ -95,13 +83,9 @@ test();
 const XunfeiTTS = require('xf-tts-socket');
 
 const test = () => {
-  const auth = {
-    app_id: 'xxxxxx',
-    app_skey: 'xxxxxxxxxxx',
-    app_akey: 'xxxxxxxxxxx',
-  };
+  const auth = { app_id: 'xxxxxx', app_skey: 'xxxxxxxxxxx', app_akey: 'xxxxxxxxxxx' };
   const business = {};
-  const text = '如果握手失败，则根据不同错误类型返回不同HTTP Code状态码';
+  const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
   const file = 'test.mp3';
   XunfeiTTS(auth, business, text, file, (err, ret) => {
     console.log('ret', ret);
