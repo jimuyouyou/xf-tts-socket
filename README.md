@@ -6,10 +6,9 @@
 - 不需要关注websocket握手细节
 - 不需要关心各种复杂的鉴权，格式转换问题
 
-# 项目解决的问题
-- xunfei最新版本tss API只支持websocket,鉴权与各种转码非常复杂
-- xunfei tts暂时只支持pcm格式返回，而很多情况我们可能需要使用mp3,wav等其他通用格式
-- websocket的回调与异步处理非常复杂，对传统的短文本tts来说，优势较少
+# 使用说明
+- 使用前可以先去讯飞官网注册用户，[在线体验和注册用户](https://www.xfyun.cn/services/online_tts)
+- 本项目为Nodejs版本的优化，Php/Java开发人员如需使用，可以搭建Nodejs微服务，作为Rest API调用
 
 # Inspired by [easychen/xf-tts-sdk](https://github.com/easychen/xf-tts-sdk)
 
