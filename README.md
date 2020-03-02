@@ -6,33 +6,22 @@
 - 不需要关注websocket握手细节
 - 不需要关心各种复杂的鉴权，格式转换问题
 
+# Inspired by [easychen/xf-tts-sdk](https://github.com/easychen/xf-tts-sdk)
+
 # 使用说明
 - 使用前可以先去讯飞官网注册用户，[在线体验和注册用户](https://www.xfyun.cn/services/online_tts)
 - 本项目为Nodejs版本的优化，Php/Java开发人员如需使用，可以搭建Nodejs微服务，作为Rest API调用
 
-# Inspired by [easychen/xf-tts-sdk](https://github.com/easychen/xf-tts-sdk)
-
-# Quick Start
+# 安装
 - `npm install xf-tts-socket --save`
-- async-await使用方式(默认发音人设置-pcm格式音频)
-```js
-const XunfeiTTS = require('xf-tts-socket');
-const { promisify } = require('util');
-const getXunfeiTTSAsync = promisify(XunfeiTTS);
 
-const test = async () => {
-  const auth = { app_id: 'xxxxxx', app_skey: 'xxxxxxxxxxx', app_akey: 'xxxxxxxxxxx' };
-  const business = {};
-  const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
-  const file = 'test.pcm';
+# 完整示例
+- [async-await使用方式(默认发音人设置-mp3格式音频)](#async-await-mp3)
+- [async-await使用方式(默认发音人设置-pcm格式音频)](#async-await-pcm)
+- [async-await使用方式(自定义发音人设置)](#async-await-custom-speaker)
+- [callback使用方式(默认发音人设置)](#callback-mp3)
 
-  const ret = await getXunfeiTTSAsync(auth, business, text, file);
-  console.log('ret', ret);
-};
-
-test();
-// 执行成功后会在你的项目根目录下生成一个test.pcm的文件
-```
+## async-await-mp3
 - async-await使用方式(默认发音人设置-mp3格式音频)
 ```js
 const XunfeiTTS = require('xf-tts-socket');
@@ -52,6 +41,29 @@ const test = async () => {
 test();
 // 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
 ```
+
+## async-await-pcm
+- async-await使用方式(默认发音人设置-pcm格式音频)
+```js
+const XunfeiTTS = require('xf-tts-socket');
+const { promisify } = require('util');
+const getXunfeiTTSAsync = promisify(XunfeiTTS);
+
+const test = async () => {
+  const auth = { app_id: 'xxxxxx', app_skey: 'xxxxxxxxxxx', app_akey: 'xxxxxxxxxxx' };
+  const business = {};
+  const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
+  const file = 'test.pcm';
+
+  const ret = await getXunfeiTTSAsync(auth, business, text, file);
+  console.log('ret', ret);
+};
+
+test();
+// 执行成功后会在你的项目根目录下生成一个test.pcm的文件
+```
+
+## async-await-custom-speaker
 - async-await使用方式(自定义发音人设置)
 ```js
 const XunfeiTTS = require('xf-tts-socket');
@@ -77,6 +89,8 @@ const test = async () => {
 test();
 // 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
 ```
+
+## callback-mp3
 - callback使用方式(默认发音人设置)
 ```js
 const XunfeiTTS = require('xf-tts-socket');
@@ -96,6 +110,7 @@ test();
 ```
 
 # 实现原理
+- 鉴权，webscoket连接和数据转码细节都在库里边实现了，详情可查看[本库源码](https://github.com/jimuyouyou/xf-tts-socket)
 - pcm是xunfei默认的格式返回，因此如果指定文件是这种类型的话，未作任何语音转码
 - 其他形式的文件(mp3, wav等)是使用ffmpeg进行的音频转码
 - ffmpeg使用的是[ffmpeg-static](https://www.npmjs.com/package/ffmpeg-static)类库
@@ -109,3 +124,7 @@ test();
 - xxx2是app_skey
 - xxx3是app_akey
 
+# 贡献与反馈
+- 可以直接在github issue里边提问题
+- 或者提交merge request
+- 文档更新及其他
