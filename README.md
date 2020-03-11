@@ -12,6 +12,7 @@
 # 使用说明
 - 使用前可以先去讯飞官网注册用户，[在线体验和注册用户](https://www.xfyun.cn/services/online_tts)
 - 本项目为Nodejs版本的优化，Php/Java开发人员如需使用，可以搭建Nodejs微服务，作为Rest API调用
+- 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 
 # 安装
 - `npm install xf-tts-socket --save`
