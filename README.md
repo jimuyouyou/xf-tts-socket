@@ -12,7 +12,7 @@
 # 使用说明
 - 使用前可以先去讯飞官网注册用户，[在线体验和注册用户](https://www.xfyun.cn/services/online_tts)
 - 本项目为Nodejs版本的优化，Php/Java开发人员如需使用，可以搭建Nodejs微服务，作为Rest API调用
-- 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
+- 注意：**js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况**
 
 # 安装
 - `npm install xf-tts-socket --save`
@@ -26,6 +26,8 @@
 ## async-await-mp3
 - async-await使用方式(默认发音人设置-mp3格式音频)
 ```js
+// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
+// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const XunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
 const getXunfeiTTSAsync = promisify(XunfeiTTS);
@@ -41,13 +43,13 @@ const test = async () => {
 };
 
 test();
-// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
-// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 ```
 
 ## async-await-pcm
 - async-await使用方式(默认发音人设置-pcm格式音频)
 ```js
+// 执行成功后会在你的项目根目录下生成一个test.pcm的文件
+// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const XunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
 const getXunfeiTTSAsync = promisify(XunfeiTTS);
@@ -63,13 +65,13 @@ const test = async () => {
 };
 
 test();
-// 执行成功后会在你的项目根目录下生成一个test.pcm的文件
-// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 ```
 
 ## async-await-custom-speaker
 - async-await使用方式(自定义发音人设置)
 ```js
+// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
+// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const XunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
 const getXunfeiTTSAsync = promisify(XunfeiTTS);
@@ -91,13 +93,13 @@ const test = async () => {
 };
 
 test();
-// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
-// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 ```
 
 ## callback-mp3
 - callback使用方式(默认发音人设置)
 ```js
+// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
+// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const XunfeiTTS = require('xf-tts-socket');
 
 const test = () => {
@@ -111,8 +113,6 @@ const test = () => {
 };
 
 test();
-// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
-// 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 ```
 
 # 实现原理
@@ -125,6 +125,8 @@ test();
 - [讯飞官网API说明](https://www.xfyun.cn/doc/tts/online_tts/API.html#%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8%E6%B5%81%E7%A8%8B)
 
 # 测试（需要提供讯飞账户上的验证key)
+- `git clone https://github.com/jimuyouyou/xf-tts-socket.git`
+- `npm install`
 - `npm run test xxx1 xxx2 xxx3`
 - xxx1是app_id
 - xxx2是app_skey
