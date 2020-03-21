@@ -9,7 +9,9 @@ const test = async (app_id, app_skey, app_akey) => {
     app_skey,
     app_akey
   };
-  const business = {};
+  // const business = { vcn: 'aisbabyxu', speed: 20, pitch: 65 };
+  // const business = { vcn: 'xiaoyan', speed: 70, pitch: 60 };
+  const business = { vcn: 'aisjiuxu', speed: 80, pitch: 50 };
   const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
   const file = path.resolve('./test/test.mp3');
 
