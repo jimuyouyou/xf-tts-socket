@@ -2,6 +2,7 @@
 - 支持回调函数
 - 支持async-await
 - 支持pcm, mp3, wav等常见音频格式
+- 支持音频保存成本地文件
 - 支持各发音人及其他详细参数的设置
 - 支持windows, mac, linux
 - 不需要关注websocket握手细节
