@@ -52,7 +52,7 @@ const xunfeiTTS = require('xf-tts-socket');
 
 const test = () => {
   const auth = { app_id: 'xxxxxx', app_skey: 'xxxxxxxxxxx', app_akey: 'xxxxxxxxxxx' };
-  const business = {};
+  const business = {aue: 'lame', sfl: 1};
   const text = '两块钱不算多，去不了香港去不了新加坡，两块钱，不算贵，不用回去开家庭会。';
   const file = 'test.mp3';
   xunfeiTTS(auth, business, text, file, (err, ret) => {
