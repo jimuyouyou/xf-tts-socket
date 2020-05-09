@@ -137,3 +137,7 @@ test();
 - 可以直接在github issue里边提问题
 - 或者提交merge request
 - 文档更新及其他
+
+# 改进清单
+- mp3使用官方最新api借口
+- 提升代码可读性
