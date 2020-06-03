@@ -18,10 +18,16 @@
 # 安装
 - `npm install xf-tts-socket --save`
 
+# 示例代码
+- [async-await使用方式(自定义发音人设置-mp3格式音频)](#async-await-mp3)
+- [callback使用方式(默认发音人设置-mp3格式音频)](#callback-mp3)
+- [async-await使用方式(自定义发音人设置-pcm格式音频)](#async-await-pcm)
+- [callback使用方式(默认发音人设置-pcm格式音频)](#callback-pcm)
+
 ## async-await-mp3
-- async-await使用方式(默认发音人设置-mp3格式音频)
+- async-await使用方式(自定义发音人设置-mp3格式音频)
 ```js
-// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
+// 执行成功后会在你的项目指定目录下生成一个mp3文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const xunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
@@ -46,9 +52,9 @@ test_async_await_mp3('xxxxxx', 'xxxxxx', 'xxxxxx');
 ```
 
 ## callback-mp3
-- callback使用方式(默认发音人设置)
+- callback使用方式(默认发音人设置-mp3格式音频)
 ```js
-// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
+// 执行成功后会在你的项目指定目录下生成一个mp3文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const xunfeiTTS = require('xf-tts-socket');
 
@@ -68,9 +74,9 @@ test_callback_mp3('xxxxxx', 'xxxxxx', 'xxxxxx');
 ```
 
 ## async-await-pcm
-- async-await使用方式(默认发音人设置-mp3格式音频)
+- async-await使用方式(自定义发音人设置-pcm格式音频)
 ```js
-// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
+// 执行成功后会在你的项目指定目录下生成一个pcm文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const xunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
@@ -96,9 +102,9 @@ test_async_await_pcm('xxxxxx', 'xxxxxx', 'xxxxxx');
 ```
 
 ## callback-pcm
-- callback使用方式(默认发音人设置)
+- callback使用方式(默认发音人设置-pcm格式音频)
 ```js
-// 执行成功后会在你的项目根目录下生成一个test.mp3的文件,使用播放器直接播放即可
+// 执行成功后会在你的项目指定目录下生成一个pcm文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
 const xunfeiTTS = require('xf-tts-socket');
 
