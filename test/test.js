@@ -7,7 +7,7 @@ const test_async_await_mp3 = async (app_id, app_skey, app_akey) => {
   const auth = { app_id, app_skey, app_akey };
   // business 支持所有语音参数，详见： 
   // https://www.xfyun.cn/doc/tts/online_tts/API.html#%E4%B8%9A%E5%8A%A1%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-business
-  const business = { aue: 'lame', sfl: 1, vcn: 'aisjiuxu', speed: 80, pitch: 50 };
+  const business = { aue: 'lame', sfl: 1, vcn: 'aisjiuxu', speed: 80, pitch: 50, volume: 100 };
   const text = '两块钱不算多，去不了香港去不了新加坡';
   const file = path.resolve('./test/test_async_await_mp3.mp3');
 
@@ -34,7 +34,7 @@ const test_async_await_pcm = async (app_id, app_skey, app_akey) => {
   const auth = { app_id, app_skey, app_akey };
   // business 支持所有语音参数，
   // 详见： https://www.xfyun.cn/doc/tts/online_tts/API.html#%E4%B8%9A%E5%8A%A1%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-business
-  const business = { aue: 'raw', vcn: 'aisjiuxu', speed: 80, pitch: 50 };
+  const business = { aue: 'raw', vcn: 'aisjiuxu', speed: 80, pitch: 50, volume: 100 };
   const text = '去不了香港去不了新加坡，两块钱';
   const file = path.resolve('./test/test_async_await_pcm.pcm');
   try {
