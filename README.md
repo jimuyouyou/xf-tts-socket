@@ -29,6 +29,7 @@
 ```js
 // 执行成功后会在你的项目指定目录下生成一个mp3文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
+const path = require('path');
 const xunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
 const tts = promisify(xunfeiTTS);
@@ -39,7 +40,7 @@ const test_async_await_mp3 = async (app_id, app_skey, app_akey) => {
   // https://www.xfyun.cn/doc/tts/online_tts/API.html#%E4%B8%9A%E5%8A%A1%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-business
   const business = { aue: 'lame', sfl: 1, vcn: 'aisjiuxu', speed: 80, pitch: 50, volume: 100 };
   const text = '两块钱不算多，去不了香港去不了新加坡';
-  const file = path.resolve('./test/test_async_await_mp3.mp3');
+  const file = path.resolve('./test_async_await_mp3.mp3');
 
   try {
     await tts(auth, business, text, file);
@@ -56,6 +57,7 @@ test_async_await_mp3('xxxxxx', 'xxxxxx', 'xxxxxx');
 ```js
 // 执行成功后会在你的项目指定目录下生成一个mp3文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
+const path = require('path');
 const xunfeiTTS = require('xf-tts-socket');
 
 const test_callback_mp3 = (app_id, app_skey, app_akey) => {
@@ -64,7 +66,7 @@ const test_callback_mp3 = (app_id, app_skey, app_akey) => {
   // business 支持所有语音参数，详见： 
   // https://www.xfyun.cn/doc/tts/online_tts/API.html#%E4%B8%9A%E5%8A%A1%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-business
   const text = '两块钱，不算贵，不用回去开家庭会。';
-  const file = path.resolve('./test/test_callback_mp3.mp3');
+  const file = path.resolve('./test_callback_mp3.mp3');
   xunfeiTTS(auth, business, text, file, (err, ret) => {
     console.log('test_callback_mp3 end', err);
   });
@@ -78,6 +80,7 @@ test_callback_mp3('xxxxxx', 'xxxxxx', 'xxxxxx');
 ```js
 // 执行成功后会在你的项目指定目录下生成一个pcm文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
+const path = require('path');
 const xunfeiTTS = require('xf-tts-socket');
 const { promisify } = require('util');
 const tts = promisify(xunfeiTTS);
@@ -88,7 +91,7 @@ const test_async_await_pcm = async (app_id, app_skey, app_akey) => {
   // 详见： https://www.xfyun.cn/doc/tts/online_tts/API.html#%E4%B8%9A%E5%8A%A1%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-business
   const business = { aue: 'raw', vcn: 'aisjiuxu', speed: 80, pitch: 50, volume: 100 };
   const text = '去不了香港去不了新加坡，两块钱';
-  const file = path.resolve('./test/test_async_await_pcm.pcm');
+  const file = path.resolve('./test_async_await_pcm.pcm');
   try {
     // 如有需要ffmpeg软件可以将pcm转换成其他任意格式的语音文件: 
     // ffmpeg -hide_banner -loglevel panic -y -f s16le -ar 16000 -ac 1 -i test_async_await_pcm.pcm test_async_await_pcm.mp3
@@ -106,6 +109,7 @@ test_async_await_pcm('xxxxxx', 'xxxxxx', 'xxxxxx');
 ```js
 // 执行成功后会在你的项目指定目录下生成一个pcm文件,使用播放器直接播放即可
 // 注意：js文件必须是utf-8编码格式，其他格式文件会出现返回空语音的情况
+const path = require('path');
 const xunfeiTTS = require('xf-tts-socket');
 
 const test_callback_pcm = (app_id, app_skey, app_akey) => {
@@ -114,7 +118,7 @@ const test_callback_pcm = (app_id, app_skey, app_akey) => {
   // https://www.xfyun.cn/doc/tts/online_tts/API.html#%E4%B8%9A%E5%8A%A1%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-business
   const business = { aue: 'raw' };
   const text = '香港去不了新加坡，两块钱';
-  const file = path.resolve('./test/test_callback_pcm.pcm');
+  const file = path.resolve('./test_callback_pcm.pcm');
   xunfeiTTS(auth, business, text, file, (err, ret) => {
     // 如有需要ffmpeg软件可以将pcm转换成其他任意格式的语音文件: 
     // ffmpeg -hide_banner -loglevel panic -y -f s16le -ar 16000 -ac 1 -i test_callback_pcm.pcm test_callback_pcm.mp3
