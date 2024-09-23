@@ -147,6 +147,3 @@ test_callback_pcm('xxxxxx', 'xxxxxx', 'xxxxxx');
 - 可以直接在github issue里边提问题
 - 或者提交merge request
 - 文档更新及其他
-
-# 改进清单
-- 提升代码可读性
